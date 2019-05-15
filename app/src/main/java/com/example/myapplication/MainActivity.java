@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,7 +14,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
 
-    ArrayList<String> lista;
+    ArrayList<Fruta> lista;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,18 +23,19 @@ public class MainActivity extends AppCompatActivity {
 
         final ListView listView = findViewById(R.id.listView);
 
-        lista = new ArrayList<String>();
+        lista = new ArrayList<Fruta>();
 
         Frutas fcontroller = new Frutas();
 
         for(Fruta f: fcontroller.FRUTAS){
 
-            lista.add(f.getNome());
+            lista.add(f);
 
         }
 
-        ArrayAdapter adapter = new ArrayAdapter(getApplicationContext(), android.R.layout.simple_list_item_1, lista);
+       // ArrayAdapter adapter = new ArrayAdapter(getApplicationContext(), android.R.layout.simple_list_item_1, lista);
 
+            FrutaAdapter adapter = new FrutaAdapter(getApplicationContext(), R.layout.layout_iten_list, lista);
 
 
         listView.setAdapter(adapter);
@@ -42,7 +44,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Toast.makeText(getApplicationContext(), lista.get(position), Toast.LENGTH_LONG).show();
+               // Toast.makeText(getApplicationContext(), lista.get(position), Toast.LENGTH_LONG).show();
+
+                Intent intent = new Intent(getApplicationContext(), mostrar_fruta.class);
+
+                intent.putExtra("Posição", position);
+
+                startActivity(intent);
 
 
             }

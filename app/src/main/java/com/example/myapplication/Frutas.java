@@ -32,7 +32,7 @@ public class Frutas {
             new BigDecimal(4.5),
             15151);
     public static final Fruta MORANGO = new Fruta("Morango",
-            "Avermelhada com traços verdes",
+            "Avermelhada com sementes",
             R.drawable.morango,
             new BigDecimal(3.9),
             new BigDecimal(6.50),
@@ -48,7 +48,7 @@ public class Frutas {
             new BigDecimal(4.5),
             15154);
     public static final Fruta ABACATE = new Fruta("Abacate",
-            "Fruta em formato esferico com esverdiada" ,
+            "Fruta em formato estranho com cor esverdiada" ,
             R.drawable.abacate,
             new BigDecimal(3.9),
             new BigDecimal(6.50),
@@ -56,7 +56,7 @@ public class Frutas {
             new BigDecimal(4.5),
             15155);
     public static final Fruta MELANCIA = new Fruta("Melancia",
-            "Fruta em formato esferico verde por fora e vermlho por dentro" ,
+            "Fruta em formato esferico verde por fora e vermelho por dentro" ,
             R.drawable.melancia,
             new BigDecimal(3.9),
             new BigDecimal(6.50),
@@ -64,7 +64,7 @@ public class Frutas {
             new BigDecimal(4.5),
             15156);
     public static final Fruta CEREJA = new Fruta("Cereja",
-            "Fruta em formato esferico verde por fora e vermlho por dentro" ,
+            "Fruta em formato esferico verde por fora e vermelho por dentro" ,
             R.drawable.cereja,
             new BigDecimal(3.9),
             new BigDecimal(6.50),
@@ -73,7 +73,7 @@ public class Frutas {
             15157);
     public static final Fruta UVA = new Fruta("Uva",
             "Fruta em formato esferico verde por fora e vermlho por dentro" ,
-            R.drawable.morango,
+            R.drawable.uva,
             new BigDecimal(3.9),
             new BigDecimal(6.50),
             2922,

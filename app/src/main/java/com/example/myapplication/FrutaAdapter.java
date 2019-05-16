@@ -31,7 +31,7 @@ class FrutaAdapter extends ArrayAdapter {
 
         convertView = inflater.inflate(mresource, parent, false);
 
-        //Associando 9os objetos do layout á variáveis locais
+        //Associando os objetos do layout à variáveis locais
         TextView tvCodigo = (TextView) convertView.findViewById(R.id.tvcodigo);
         TextView tvNome = (TextView) convertView.findViewById(R.id.tvNomeFruta);
         TextView tvPreco = (TextView) convertView.findViewById(R.id.tvPreco);

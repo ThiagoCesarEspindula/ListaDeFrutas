@@ -5,9 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -46,9 +44,11 @@ public class MainActivity extends AppCompatActivity {
 
                // Toast.makeText(getApplicationContext(), lista.get(position), Toast.LENGTH_LONG).show();
 
-                Intent intent = new Intent(getApplicationContext(), mostrar_fruta.class);
+                Intent intent = new Intent(getApplicationContext(), MostrarFruta.class);
 
-                intent.putExtra("Posição", position);
+               // intent.putExtra("Posição", position);
+
+                intent.putExtra("Descricao", lista.get(position).getDescricao());
 
                 startActivity(intent);
 

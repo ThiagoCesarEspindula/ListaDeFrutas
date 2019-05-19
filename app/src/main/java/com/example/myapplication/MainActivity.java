@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
        // ArrayAdapter adapter = new ArrayAdapter(getApplicationContext(), android.R.layout.simple_list_item_1, lista);
 
-            FrutaAdapter adapter = new FrutaAdapter(getApplicationContext(), R.layout.layout_iten_list, lista);
+        FrutaAdapter adapter = new FrutaAdapter(getApplicationContext(), R.layout.layout_iten_list, lista);
 
 
         listView.setAdapter(adapter);
@@ -46,9 +46,9 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(getApplicationContext(), MostrarFruta.class);
 
-               // intent.putExtra("Posição", position);
+                intent.putExtra("Posição", position);
 
-                intent.putExtra("Descricao", lista.get(position).getDescricao());
+                //intent.putExtra("Descricao", lista.get(position).getDescricao());
 
                 startActivity(intent);
 

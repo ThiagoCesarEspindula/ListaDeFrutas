@@ -3,12 +3,14 @@ package com.example.myapplication;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
-import android.widget.TextView;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 
 public class MostrarFruta extends AppCompatActivity {
+
+
+    ArrayList<Fruta> lista;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,23 +19,21 @@ public class MostrarFruta extends AppCompatActivity {
 
         Intent i = getIntent();
 
-        //int pos = i.getIntExtra("Posição", -1);
+        int pos = i.getIntExtra("Posição", -1);
 
-        String desc = i.getStringExtra("Descricao");
+        final ListView listView = findViewById(R.id.listViewDesc);
 
-        TextView tvDescricao = findViewById(R.id.tvDescricao);
+        lista = new ArrayList<Fruta>();
+
+        Frutas fcontroller = new Frutas();
+
+        lista.add(fcontroller.FRUTAS[pos]);
+
+        DescricaoAdapter adapter = new DescricaoAdapter(getApplicationContext(), R.layout.layout_descricao_fruta, lista);
+
+        listView.setAdapter(adapter);
 
 
-
-        ////Fruta f = new Fruta("","","","","","","","");
-
-
-
-         //FrutaAdapter frutaAdapter = new FrutaAdapter(getApplicationContext(), pos);
-
-
-
-        tvDescricao.setText("" + desc);
 
 
     }
